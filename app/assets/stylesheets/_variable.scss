@@ -1,0 +1,17 @@
+//色
+$white: #ffffff;
+$blue: #38aef0;
+
+//左上のアイコン
+@mixin float_right {
+  float: right;
+  line-height: 96px;
+  color: $white;
+}
+
+//日付
+@mixin date {
+  font-size: 12px;
+  color: #999999;
+  margin-left: 10px;
+}
