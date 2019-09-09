@@ -2,6 +2,15 @@
 @import "./messages";
 @import "./variable";
 @import "font-awesome";
+@import "config/colors";
+@import "config/size";
+@import "config/reset";
+@import "mixins/mixin";
+@import "mixins/vendor_prefix";
+@import "modules/side_bar";
+@import "modules/chat";
+@import "modules/user";
+@import "messages/messages.scss"
 
 .flash-box {
   background-color: $blue;
@@ -97,16 +106,6 @@
         text-decoration: none;
       }
     }
-      // &_edit {
-      //   float: right;
-      //   border: solid 1px $blue;
-      //   // padding: 0 20px;
-      //   margin-top: 28px;
-      //   color: $blue;
-      //   height: 40px;
-      //   line-height: 40px;
-      // }
-    // }
   
     &__middle {
       height: calc(100vh - 210px);
@@ -163,9 +162,6 @@
           height: 100%;
           width: 100%;
           padding: 0 50px 0 10px;
-          // width: 100%;
-          // padding-left: 10px;
-          // border: none;
         }
 
         &_btn2 {
@@ -185,35 +181,6 @@
           text-decoration: none;
         }
       }
-        // &__main {
-        //   width: 100%;
-        //   padding-right: 40px;
-        
-          // &_icon {
-          //   position: absolute;
-          //   top: 35px;
-          //   right: 150px;
-          // }
-        
-          // &_submit {
-          //   // height: 100%;
-          //   // width: 100%;
-          //   padding-left: 10px;
-          //   width: 100%;
-          //   padding-left: 10px;
-          //   border: none;
-          // }
-        // }
-      
-        // &_send {
-        //   position: absolute;
-        //   top: 20px;
-        //   right: 25px;
-        //   background-color: $blue;
-        //   padding: 15px 25px;
-        //   color: $white;
-        // }
-      // }
     }
   }
 }
@@ -221,32 +188,3 @@
 .btn {
   color: white;
 }
-
-// .btn2 {
-//   color: black;
-//   position: absolute;
-//   right: 160px;
-//   top: 35px;
-// }
-
-// .edit-btn {
-//   display: inline-block;
-//   float: right;
-//   border: solid 1px $blue;
-//   margin-top: 28px;
-//   color: $blue;
-//   line-height: 40px;
-//   width: 70px;
-//   text-align: center;
-//   text-decoration: none;
-// }
-
-// .send-btn {
-//   position: absolute;
-//   top: 20px;
-//   right: 25px;
-//   background-color: $blue;
-//   padding: 15px 25px;
-//   color: $white;
-//   text-decoration: none;
-// }
