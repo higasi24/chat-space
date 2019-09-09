@@ -32,7 +32,7 @@ Things you may want to cover:
 |password|string|unique: true|
 
 ### Association
-- has_many :tweets
+- has_many :massages
 - has_many :groups_users
 - has_many :groups, throuth: :groups_users
 
@@ -54,11 +54,11 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
-- has_many :tweets
+- has_many :messages
 - has_many :groups_users
 - has_many :users, throuth: :groups_users
 
-## tweetsテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|

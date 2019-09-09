@@ -1,17 +1,17 @@
-.flash-box {
-  background-color: $blue;
-  width: 100vw;
+// .flash-box {
+//   background-color: $blue;
+//   width: 100vw;
 
-  &__class {
-    color: $white;
-    text-align: center;
-  }
-}
+//   &__class {
+//     color: $white;
+//     text-align: center;
+//   }
+// }
 .contents {
   display: flex;
 
   &__left {
-    height: calc(100vh -24px);
+    height: 100vh;
     width: 300px;
     background-color: #2f3151;
 
@@ -94,7 +94,7 @@
     }
   
     &__middle {
-      height: calc(100vh - 210px);
+      height: calc(100vh - 189px);
       background-color: #fafafa;
     
       &__down {
