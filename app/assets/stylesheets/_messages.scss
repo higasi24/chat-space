@@ -1,9 +1,9 @@
 .flash-box {
-  background-color: #38aef0;
+  background-color: $blue;
   width: 100vw;
 
   &__class {
-    color: #ffffff;
+    color: $white;
     text-align: center;
   }
 }
@@ -29,16 +29,12 @@
       }
 
       &_logo1 {
-        float: right;
-        line-height: 96px;
-        color: #ffffff;
+        @include float_right;
         margin-left: 5px;
       }
 
       &_logo2 {
-        float: right;
-        line-height: 96px;
-        color: #ffffff;
+        @include float_right;
       }
     }
 
@@ -49,14 +45,14 @@
       &__box1 {
         font-size: 15px;
         font-weight: bold;
-        color: #ffffff;
+        color: $white;
         margin-bottom: 5px;
       }
 
       &__box2 {
         font-size: 11px;
         font-weight: bold;
-        color: #ffffff;
+        color: $white;
       }
     }
   }
@@ -84,14 +80,16 @@
         }
       }
     
-      &_edit {
+      &_edit-btn {
+        display: inline-block;
         float: right;
-        border: solid 1px #38aef0;
-        padding: 0 20px;
+        border: solid 1px $blue;
         margin-top: 28px;
-        color: #38aef0;
-        height: 40px;
+        color: $blue;
         line-height: 40px;
+        width: 70px;
+        text-align: center;
+        text-decoration: none;
       }
     }
   
@@ -109,9 +107,7 @@
           padding-top: 46px;
         
           &__date {
-            font-size: 12px;
-            color: #999999;
-            margin-left: 10px;
+            @include date;
           }
         }
       }
@@ -132,9 +128,7 @@
         }
       
         &__date {
-          font-size: 12px;
-          color: #999999;
-          margin-left: 10px;
+          @include date;
         }
       }
     }
@@ -150,31 +144,33 @@
         border: solid #ddd;
         border-width: 20px 140px 20px 40px;
       
-        &__main {
+        &_submit {
+          height: 100%;
           width: 100%;
-        
-          &_icon {
-            position: absolute;
-            top: 35px;
-            right: 150px;
-          }
-        
-          &_submit {
-            height: 100%;
-            width: 100%;
-            padding-left: 10px;
-          }
+          padding: 0 50px 0 10px;
+        }
+
+        &_btn2 {
+          color: black;
+          position: absolute;
+          right: 160px;
+          top: 35px;
         }
       
-        &_send {
+        &_send-btn {
           position: absolute;
           top: 20px;
           right: 25px;
-          background-color: #38aef0;
+          background-color: $blue;
           padding: 15px 25px;
-          color: #ffffff;
+          color: $white;
+          text-decoration: none;
         }
       }
     }
   }
+}
+
+.btn {
+  color: white;
 }
