@@ -56,120 +56,120 @@
       }
     }
   }
-
-  &__right {
-    width: calc(100vw - 300px);
-  
-    &__header {
-      height: 96px;
-      border-bottom: solid #eeeeee;
-      padding: 0 40px;
-    
-      &__area {
-        float: left;
-      
-        &__box3 {
-          margin: 35px 0 15px 0;
-          font-size: 20px;
-          color: #333333;
-        }
-      
-        &__mem {
-          font-size: 12px;
-          color: #999999;
-        }
-      }
-    
-      &_edit-btn {
-        display: inline-block;
-        float: right;
-        border: solid 1px $blue;
-        margin-top: 28px;
-        color: $blue;
-        line-height: 40px;
-        width: 70px;
-        text-align: center;
-        text-decoration: none;
-      }
-    }
-  
-    &__middle {
-      height: calc(100vh - 189px);
-      background-color: #fafafa;
-    
-      &__down {
-        width: calc(100vw - 300px);
-        padding: 0 40px;
-      
-        &__area {
-          display: flex;
-          margin-bottom: 10px;
-          padding-top: 46px;
-        
-          &__date {
-            @include date;
-          }
-        }
-      }
-    }
-  
-    &__footer2 {
-      width: calc(100vw - 300px);
-      padding: 0 40px;
-    
-      &__area {
-        display: flex;
-        margin-top: 40px;
-      
-        &__box5 {
-          font-size: 16px;
-          font-weight: bold;
-          color: #434a54;
-        }
-      
-        &__date {
-          @include date;
-        }
-      }
-    }
-  
-    &__footer3 {
-      height: 90px;
-      position: relative;
-    
-      &__form {
-        height: 90px;
-        display: flex;
-        box-sizing: border-box;
-        border: solid #ddd;
-        border-width: 20px 140px 20px 40px;
-      
-        &_submit {
-          height: 100%;
-          width: 100%;
-          padding: 0 50px 0 10px;
-        }
-
-        &_btn2 {
-          color: black;
-          position: absolute;
-          right: 160px;
-          top: 35px;
-        }
-      
-        &_send-btn {
-          position: absolute;
-          top: 20px;
-          right: 25px;
-          background-color: $blue;
-          padding: 15px 25px;
-          color: $white;
-          text-decoration: none;
-        }
-      }
-    }
-  }
 }
+//   &__right {
+//     width: calc(100vw - 300px);
+  
+//     &__header {
+//       height: 96px;
+//       border-bottom: solid #eeeeee;
+//       padding: 0 40px;
+    
+//       &__area {
+//         float: left;
+      
+//         &__box3 {
+//           margin: 35px 0 15px 0;
+//           font-size: 20px;
+//           color: #333333;
+//         }
+      
+//         &__mem {
+//           font-size: 12px;
+//           color: #999999;
+//         }
+//       }
+    
+//       &_edit-btn {
+//         display: inline-block;
+//         float: right;
+//         border: solid 1px $blue;
+//         margin-top: 28px;
+//         color: $blue;
+//         line-height: 40px;
+//         width: 70px;
+//         text-align: center;
+//         text-decoration: none;
+//       }
+//     }
+  
+//     &__middle {
+//       height: calc(100vh - 189px);
+//       background-color: #fafafa;
+    
+//       &__down {
+//         width: calc(100vw - 300px);
+//         padding: 0 40px;
+      
+//         &__area {
+//           display: flex;
+//           margin-bottom: 10px;
+//           padding-top: 46px;
+        
+//           &__date {
+//             @include date;
+//           }
+//         }
+//       }
+//     }
+  
+//     &__footer2 {
+//       width: calc(100vw - 300px);
+//       padding: 0 40px;
+    
+//       &__area {
+//         display: flex;
+//         margin-top: 40px;
+      
+//         &__box5 {
+//           font-size: 16px;
+//           font-weight: bold;
+//           color: #434a54;
+//         }
+      
+//         &__date {
+//           @include date;
+//         }
+//       }
+//     }
+  
+//     &__footer3 {
+//       height: 90px;
+//       position: relative;
+    
+//       &__form {
+//         height: 90px;
+//         display: flex;
+//         box-sizing: border-box;
+//         border: solid #ddd;
+//         border-width: 20px 140px 20px 40px;
+      
+//         &_submit {
+//           height: 100%;
+//           width: 100%;
+//           padding: 0 50px 0 10px;
+//         }
+
+//         &_btn2 {
+//           color: black;
+//           position: absolute;
+//           right: 160px;
+//           top: 35px;
+//         }
+      
+//         &_send-btn {
+//           position: absolute;
+//           top: 20px;
+//           right: 25px;
+//           background-color: $blue;
+//           padding: 15px 25px;
+//           color: $white;
+//           text-decoration: none;
+//         }
+//       }
+//     }
+//   }
+// }
 
 .btn {
   color: white;
