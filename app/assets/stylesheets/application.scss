@@ -6,3 +6,7 @@
 @import "modules/flash";
 @import "modules/side_bar";
 @import "modules/messages";
+
+.contents {
+  display: flex;
+}

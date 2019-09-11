@@ -13,11 +13,17 @@
         = fa_icon 'cog', class: 'btn'
   .contents__left__footer1
     - current_user.groups.each do |group|
-      = link_to group_messages_path(group) do
-        .contents__left__footer1__box1
+      .contents__left__footer1__box1
+        = link_to group_messages_path(group), class: "b" do
           = group.name
-        .contents__left__footer1__box2
-          = group.show_last_message
+        %p(class="j")= group.show_last_message
+
+
+      -#  - current_user.groups.each do |group|
+        -# = link_to group_messages_path(group) do
+        -#   = group.name
+        -# .contents__left__footer1__box2
+        -#   = group.show_last_message
   -# .contents__right
   -#   .contents__right__header
   -#     .contents__right__header__area
