@@ -14,7 +14,7 @@
   .contents__right__footer3
     .contents__right__footer3__form
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'contents__right__footer3__form_submit', placeholder: 'type a message'
+        = f.text_field :content, class: 'contents__right__footer3__form_submit', value:"", placeholder: 'type a message'
         = f.label :image, class: 'contents__right__footer3__form_submit' do
           = fa_icon 'picture-o', class: 'bn'
           = f.file_field :image, class: 'hidden'
