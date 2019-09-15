@@ -1,5 +1,24 @@
 = render "shared/side_bar"
-= render "messages/message"
+.contents__right
+  .contents__right__header
+    .contents__right__header__area
+      .contents__right__header__area__box3
+        = @group.name
+      .contents__right__header__area__mem
+        Member
+        - @group.users.each do |group_user|
+          = ": #{group_user.name}"
+    =link_to "", class: "contents__right__header_edit-btn" do
+      Edit
+  = render partial:"message", colection: @messages
+  .contents__right__footer3
+    .contents__right__footer3__form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'contents__right__footer3__form_submit', placeholder: 'type a message'
+        = f.label :image, class: 'contents__right__footer3__form_submit' do
+          = fa_icon 'picture-o', class: 'bn'
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'contents__right__footer3__form_send-btn'
 
 -# .contents__right
 -#   .contents__right__header

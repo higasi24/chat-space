@@ -1,43 +1,13 @@
-.contents__right
-  .contents__right__header
-    .contents__right__header__area
-      .contents__right__header__area__box3
-        = @group.name
-      .contents__right__header__area__mem
-        Member
-        - @group.users.each do |group_user|
-          = ": #{group_user.name}"
-    =link_to "", class: "contents__right__header_edit-btn" do
-      Edit
-  .contents__right__middle
-    .contents__right__middle__down
-      .contents__right__middle__down__area
-        .contents__right__middle__down__area__post
-          - @messages.each do |m|
-            %h9(class="contents__right__middle__down__post_name")= m.user.name
-            .contents__right__middle__down__area__post_date
-              = m.created_at
-            - if m.content.present?
-              .contents__right__middle__down__area__post_info
-                %p(class="info")= m.content
-              .contents__right__middle__down__area__post_image
-                = image_tag m.image.url, class: 'image', size: "200x133" if m.image.present?
-            -# %p(class="info")= m.content
-        -# - @messages.each do |m|
-        -#   = m.user.name
-          -# .contents__right__middle__down__area__date
-          -#   = m.created_at
-        -# .contents__right__middle__down__area__box4
-          -# - @messages.each do |m|
-          -#   = m.user.name
-            -# .contents__right__middle__down__area__date
-            -#   = m.created_at
-      
-  .contents__right__footer3
-    .contents__right__footer3__form
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'contents__right__footer3__form_submit', placeholder: 'type a message'
-        = f.label :image, class: 'contents__right__footer3__form_submit' do
-          = fa_icon 'picture-o', class: 'bn'
-          = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'contents__right__footer3__form_send-btn'
+.contents__right__middle
+  .contents__right__middle__down
+    .contents__right__middle__down__area
+      .contents__right__middle__down__area__post
+        - @messages.each do |m|
+          %h9(class="contents__right__middle__down__post_name")= m.user.name
+          .contents__right__middle__down__area__post_date
+            = m.created_at
+          - if m.content.present?
+            .contents__right__middle__down__area__post_info
+              %p(class="info")= m.content
+            .contents__right__middle__down__area__post_image
+              = image_tag m.image.url, class: 'image', size: "200x133" if m.image.present?
