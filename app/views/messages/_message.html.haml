@@ -1,0 +1,13 @@
+.contents__right__middle
+  .contents__right__middle__down
+    .contents__right__middle__down__area
+      .contents__right__middle__down__area__post
+        - @messages.each do |m|
+          %h9(class="contents__right__middle__down__post_name")= m.user.name
+          .contents__right__middle__down__area__post_date
+            = m.created_at
+          - if m.content.present?
+            .contents__right__middle__down__area__post_info
+              %p(class="info")= m.content
+            .contents__right__middle__down__area__post_image
+              = image_tag m.image.url, class: 'image', size: "200x133" if m.image.present?
