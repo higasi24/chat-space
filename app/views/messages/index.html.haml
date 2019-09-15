@@ -1,43 +1,21 @@
 = render "shared/side_bar"
-= render "messages/message"
-
--# .contents__right
--#   .contents__right__header
--#     .contents__right__header__area
--#       .contents__right__header__area__box3
--#         サンプル
--#       .contents__right__header__area__mem
--#         Member : seo
--#     =link_to "", class: "contents__right__header_edit-btn" do
--#       Edit
--#   .contents__right__middle
--#     .contents__right__middle__down
--#       .contents__right__middle__down__area
--#         .contents__right__middle__down__area__box4
--#           seo
--#         .contents__right__middle__down__area__date
--#           2017-05-18 13:19:51 UTC
--#       .contents__right__middle__down__text
--#         はじめまして
-    -# .contents__right__footer2
-    -#   .contents__right__footer2__area
-    -#     .contents__right__footer2__area__box5
-    -#       seo
-    -#     .contents__right__footer2__area__date
-    -#       2017-05-18 13:20:00 UTC
-    -#   .right-footer_text
-    -#     よろしくお願いします
-
-    -# .contents__right__footer3
-    -#   .contents__right__footer3__form
-    -#     = form_for [@group, @message] do |f|
-    -#       = f.text_field :content, class: 'contents__right__footer3__form_submit', placeholder: 'type a message'
-    -#       = f.label :image, class: 'form__mask__image' do
-    -#         = fa_icon 'picture-o', class: 'contents__right__footer3__form_btn2'
-    -#         = f.file_field :image, class: 'hidden'
-    -#         = f.submit 'Send', class: 'contents__right__footer3__form_send-btn'
-      -# %input{placeholder: 'type a message', class: 'contents__right__footer3__form_submit',}
-      -# =link_to "", class: "contents__right__footer3__form_btn2" do
-      -#   = fa_icon "image lg"
-      -# =link_to "", class: "contents__right__footer3__form_send-btn" do
-      -#   Send
+.contents__right
+  .contents__right__header
+    .contents__right__header__area
+      .contents__right__header__area__box3
+        = @group.name
+      .contents__right__header__area__mem
+        Member
+        - @group.users.each do |group_user|
+          = ": #{group_user.name}"
+    =link_to "", class: "contents__right__header_edit-btn" do
+      Edit
+  = render partial:"message", colection: @messages
+  .contents__right__footer3
+    .contents__right__footer3__form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'contents__right__footer3__form_submit', placeholder: 'type a message'
+        = f.label :image, class: 'contents__right__footer3__form_submit' do
+          = fa_icon 'picture-o', class: 'bn'
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'contents__right__footer3__form_send-btn'

@@ -37,7 +37,7 @@
   &__middle {
     height: calc(100vh - 189px);
     background-color: #fafafa;
-    overflow: scroll;
+    overflow: auto;
   
     &__down {
       width: calc(100vw - 300px);
