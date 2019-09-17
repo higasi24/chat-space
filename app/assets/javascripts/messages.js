@@ -24,6 +24,7 @@ $(function(){
       contentType: false
     })
     .done(function(message){
+      location.href="/posts";
       let html = buildMessage(message);
       $(".contents__right__middle__down__area__post").append(html);
       $('form')[0].reset();

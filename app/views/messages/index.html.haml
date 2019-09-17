@@ -8,7 +8,7 @@
         Member
         - @group.users.each do |group_user|
           = ": #{group_user.name}"
-    =link_to "", class: "contents__right__header_edit-btn" do
+    =link_to edit_group_path(@group), class: "contents__right__header_edit-btn" do
       Edit
   = render partial:"message", colection: @messages
   .contents__right__footer3
