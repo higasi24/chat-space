@@ -21,6 +21,11 @@ default: &default
 development:
   <<: *default
   database: chat-space_development
+  adapter: mysql2
+  atabase: mydb
+  host: localhost
+  username: root
+  password: "Tomotsugu1209"
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
