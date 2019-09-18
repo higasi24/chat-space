@@ -40,26 +40,17 @@ $(document).on('turbolinks:load', function(){
         })
       })
 
-      // if( path == `/group/${}/message`)
-      // var reloadMessages = buildMessage(message)
-    let reloadMessages = (function() {
-      // group_id = $(".contents__right__header__area").data("id"); 
+    let reloadMessages = (function() { 
       
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
-        //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
         last_message_id = $('.message:last').data("id");
-        console.log(last_message_id)
         $.ajax({
-          //ルーティングで設定した通りのURLを指定
           url: "api/messages",
-          //ルーティングで設定した通りhttpメソッドをgetに指定
           type: 'get',
           dataType: 'json',
-          //dataオプションでリクエストに値を含める
           data: {id: last_message_id}
         })
         .done(function(messages) {
-          console.log("k");
           let insertHTML = '';
           messages.forEach(function (message){
             insertHTML = buildMessage(message);
@@ -75,5 +66,3 @@ $(document).on('turbolinks:load', function(){
     setInterval(reloadMessages, 5000);
   });
 });
-
-// .data('id');
