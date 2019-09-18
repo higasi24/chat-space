@@ -31,12 +31,16 @@ $(document).on('turbolinks:load', function(){
         .done(function(message){
           let html = buildMessage(message);
           $(".contents__right__middle__down__area__post").append(html);
-          $('form')[0].reset();
-          $(".contents__right__footer3__form_send-btn").prop("disabled",false);
           $('.contents__right__middle').animate({scrollTop: $('.contents__right__middle')[0].scrollHeight}, 'fast');
         })
+        
         .fail(function(message){
           alert("エラー");
+        })
+
+        .always(function(){
+          $('form')[0].reset();
+          $(".contents__right__footer3__form_send-btn").prop("disabled",false);
         })
       })
 
