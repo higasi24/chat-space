@@ -9,7 +9,7 @@ $(document).on('turbolinks:load', function(){
                           <p class="info">${message.content}</p>
                         </div>
                         <div class="contents__right__middle__down__area__post_image">
-                          <img class="image" src="${message.image}" alt="" width="200" height="133">
+                          <img class="image" src="${image}" alt="" width="200" height="133">
                         </div>
                     </div>`
       return html;
