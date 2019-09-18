@@ -15,6 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
+  host: localhost
   socket: /tmp/mysql.sock
 
 development:
@@ -49,6 +50,8 @@ test:
 #
 production:
   <<: *default
+  adapter: mysql2
+  encoding: utf8
   database: chat-space_production
   username: root
   password: <%= ENV['Tomotsugu1209'] %>
