@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @users = User.where('name LIKE(?) && id != (?)', "%#{params[:keyword]}%", current_user.id)
     @group = Group.new
     respond_to do |format|
-      format.html
+      format.html { redirect_to new_group_path}
       format.json
     end
   end
