@@ -1,11 +1,13 @@
 .account-page {
   .account-page__inner {
-    width: 980px;
+    width: 900px;
     margin: 60px auto;
     padding: 60px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
+    position: absolute;
+    left: 200px;
 
     .account-page__inner--left, .account-page__inner--right {
       float: left;
