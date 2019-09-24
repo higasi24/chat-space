@@ -1,8 +1,9 @@
 .contents__right {
   width: calc(100vw - 300px);
+  margin-left: 300px;
 
   &__header {
-    height: 96px;
+    height: 100px;
     border-bottom: solid #eeeeee;
     padding: 0 40px;
   
@@ -35,7 +36,7 @@
   }
 
   &__middle {
-    height: calc(100vh - 189px);
+    height: calc(100vh - 193px);
     background-color: #fafafa;
     overflow: auto;
   
