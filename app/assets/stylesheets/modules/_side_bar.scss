@@ -1,22 +1,14 @@
-// .flash-box {
-//   background-color: $blue;
-//   width: 100vw;
-
-//   &__class {
-//     color: $white;
-//     text-align: center;
-//   }
-// }
 .contents {
   display: flex;
 
   &__left {
     height: 100vh;
     width: 300px;
-    background-color: #2f3151;
+    background-color: #2f3e51;
+    float: left;
 
     &__header {
-      height: 96px;
+      height: 100px;
       padding: 0 20px;
       background-color: #253141;
    
@@ -24,7 +16,7 @@
         font-size: 16px;
         font-weight: bold;
         color: #ffffff;
-        line-height: 96px;
+        line-height: 100px;
         float: left;
       }
 
