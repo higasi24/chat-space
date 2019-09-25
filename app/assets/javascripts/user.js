@@ -39,30 +39,22 @@ $(function() {
         dataType: 'json'
       })
 
-      .done(function(users){
-        if (input.length === 0){
-          $("#user-search-result").empty();
-        }
-
-        else if (input.length !== 0){
-          $("#user-search-result").empty();
+      .done(function(users) {
+        $("#user-search-result").empty();
+        if (users.length !== 0) {
           users.forEach(function(user){
-          appendList(user);
+            appendList(user);
           });
         }
-
         else {
-          $("#user-search-result").empty();
           appendUserNone("一致するユーザーが見つかりません");
         }
-       
       })
-
-      .fail(function(){
-        alert("ユーザー検索に失敗しました");
-      });
+      .fail(function() {
+        alert('ユーザー検索に失敗しました');
+      })
     });
-
+    
     $("#user-search-result").on("click", ".chat-group-user__btn--add", function(){
       let user_name = $(this).data('name');
       let user_id = $(this).data('id');
@@ -74,3 +66,25 @@ $(function() {
     });
   });
 });
+
+
+
+
+// .done(function(users){
+//   if (input.length === 0){
+//     $("#user-search-result").empty();
+//   }
+
+//   else if (input.length !== 0){
+//     $("#user-search-result").empty();
+//     users.forEach(function(user){
+//     appendList(user);
+//     });
+//   }
+
+//   else {
+//     $("#user-search-result").empty();
+//     appendUserNone("一致するユーザーが見つかりません");
+//   }
+ 
+// })
