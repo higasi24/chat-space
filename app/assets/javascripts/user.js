@@ -30,12 +30,18 @@ $(function() {
 
 
     $("#user-search-field").on("keyup", function() {
-      let input = $("#user-search-field").val();
+      users = [];
+      $('input[name="group[user_ids][]"]').each(function(i, user){
+        users.push($(user).val());
+      });
+      let input = $('#user-search-field').val();
   
       $.ajax({
         type: 'GET',
         url: '/users',
-        data: { keyword: input },
+        data: { keyword: input,
+                user_ids: users 
+              },
         dataType: 'json'
       })
 
@@ -58,6 +64,7 @@ $(function() {
     $("#user-search-result").on("click", ".chat-group-user__btn--add", function(){
       let user_name = $(this).data('name');
       let user_id = $(this).data('id');
+      $(this).parent().remove();
       appendUser(user_name, user_id);
     });
 
@@ -88,3 +95,4 @@ $(function() {
 //   }
  
 // })
+
