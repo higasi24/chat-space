@@ -1,5 +1,5 @@
-$(document).on('turbolinks:load', function(){
-  $(function(){
+$(function(){
+  $(document).on('turbolinks:load', function(){
     function buildMessage(message){
       var image =message.image ? `${message.image}`:``;
         let html = `<div class="message" data-id="${message.id}">
